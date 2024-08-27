@@ -8,8 +8,8 @@ const teams = ["Board Members", "Advisors/Mentors", "Excutives", "Staffs"];
 const blogs = ["Recent Blogs", "New Blogs"];
 const Footer = () => {
   return (
-    <div className="space-y-4">
-      <div className="flex justify-between border-t">
+    <footer className="space-y-4 px-6 py-5 font-montserrat">
+      <div className="flex justify-between border-t space-y-3">
         <div>
           <Image
             src="/assets/helping.svg"
@@ -20,22 +20,24 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center items-center">
           <p>Get involved in improving tech education in Africa!</p>
-          <Buttons name="Support Us" />
+          <button className=" rounded-md bg-[#264fad] text-white font-medium px-2 ">
+            Support Us
+          </button>
         </div>
         <div>
-          <p>Links</p>
+          <p className="font-semibold mb-3">Links</p>
           {links.map((link) => (
             <div>{link}</div>
           ))}
         </div>
         <div>
-          <p>Teams</p>
+          <p className="font-semibold mb-3">Teams</p>
           {teams.map((team) => (
             <div>{team}</div>
           ))}
         </div>
         <div>
-          <p>Blogs</p>
+          <p className="font-semibold mb-3">Blogs</p>
           {blogs.map((blog) => (
             <div>{blog}</div>
           ))}
@@ -52,7 +54,7 @@ const Footer = () => {
           />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

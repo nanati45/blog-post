@@ -1,12 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import Buttons from "./Buttons";
-
-const Post = () => {
+import { data } from "@/type";
+import InnerHTML from "dangerously-set-html-content";
+const Post = ({ da }: { da: data }) => {
+  //   const sanitizeHTML = (html: string) => {
+  //     return html.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/gi, "");
+  //   };
+  console.log("object", da);
   return (
-    <div className="w-1/2">
-      <div className="flex">
-        <div>
+    <div className="w-full border-t p-4 space-y-2">
+      <div className="flex gap-3">
+        <div className="flex-shrink-0">
           <Image
             src="/assets/profile.svg"
             alt="profile picture"
@@ -15,36 +20,36 @@ const Post = () => {
           />
         </div>
         <div>
-          <p>Yididiya Kebede</p>
-          <p>SOFTWARE ENGINEER</p>
+          <p className="font-semibold">{da.author?.name || "Unknown Author"}</p>
+          <p className="font-medium  text-[#737373]">
+            {da.author?.role || "Unknown"}
+          </p>
         </div>
-        <div>Apr 16, 2022</div>
+        <div className="text-[#737373]">{da.createdAt}</div>
       </div>
-      <div className="flex justify-center items-center">
-        <div className="">
-          <p>
-            The essential guide to Competitive Programming Tab System On React :
-            3 ways to do it.{" "}
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea{" "}
+      <div className="grid  grid-cols-6 ">
+        <div className="space-y-2 col-span-4">
+          <p className="font-bold">{da.title} </p>
+
+          <p className="text-[#737373] font-normal">
+            <InnerHTML html={da.description} />
           </p>
         </div>
-        <div>
+        <div className="flex-shrink-0 col-span-2">
           <Image
             src="/assets/images/image.png"
             alt="profile picture"
-            width="400"
+            width="300"
             height="180"
           />
         </div>
       </div>
-      <div className="flex gap-6">
-        <Buttons name="UX" />
-        <Buttons name="Development" />
+      <div className="flex gap-3">
+        {da.skills.map((skill, index) => (
+          <button className=" rounded-3xl text-gray-400 bg-[#f5f5f5] font-normal p-2 ">
+            {skill}
+          </button>
+        ))}
       </div>
     </div>
   );

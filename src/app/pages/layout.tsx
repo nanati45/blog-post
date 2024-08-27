@@ -18,10 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <body className={`font-montserrat flex flex-col min-h-screen`}>
         <Header />
-        <div>{children}</div>
-        <Footer />
+        <div className="items-center">{children}</div>
+        <div className="mt-auto ">
+          <Footer />
+        </div>
       </body>
     </html>
   );

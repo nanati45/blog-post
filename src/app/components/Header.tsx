@@ -26,9 +26,11 @@ const Header = () => {
           <div>{tab}</div>
         ))}
       </div>
-      <div className="flex gap-8 justify-items-center">
+      <div className="flex gap-8 justify-items-center items-center">
         <div>Login</div>
-        <Buttons name="Donate" />
+        <button className=" rounded-md text-white  bg-[#264fad] font-semibold px-5  ">
+          Donate
+        </button>
       </div>
     </div>
   );
