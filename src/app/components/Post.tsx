@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Buttons from "./Buttons";
 import { data } from "@/type";
 import InnerHTML from "dangerously-set-html-content";
 const Post = ({ da }: { da: data }) => {

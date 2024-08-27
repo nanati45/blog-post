@@ -1,6 +1,5 @@
 import React from "react";
-import A2SVLogo from "../../../public/assets/logo.svg";
-import Buttons from "./Buttons";
+
 import Image from "next/image";
 const tabs = [
   "Home",
@@ -12,8 +11,8 @@ const tabs = [
 ];
 const Header = () => {
   return (
-    <div className="flex justify-between p-6 ">
-      <div>
+    <div className="flex justify-between items-center p-6 ">
+      <div className="flex-shrink-0">
         <Image
           src="/assets/logo.svg"
           alt="A2SV Logo"
@@ -28,7 +27,7 @@ const Header = () => {
       </div>
       <div className="flex gap-8 justify-items-center items-center">
         <div>Login</div>
-        <button className=" rounded-md text-white  bg-[#264fad] font-semibold px-5  ">
+        <button className=" rounded-md text-white  bg-[#264fad] font-semibold px-5 py-1  ">
           Donate
         </button>
       </div>
