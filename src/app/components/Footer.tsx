@@ -26,20 +26,20 @@ const Footer = () => {
         </div>
         <div>
           <p className="font-semibold mb-3">Links</p>
-          {links.map((link) => (
-            <div>{link}</div>
+          {links.map((link, index) => (
+            <div key={index}>{link}</div>
           ))}
         </div>
         <div>
           <p className="font-semibold mb-3">Teams</p>
-          {teams.map((team) => (
-            <div>{team}</div>
+          {teams.map((team, index) => (
+            <div key={index}>{team}</div>
           ))}
         </div>
         <div>
           <p className="font-semibold mb-3">Blogs</p>
-          {blogs.map((blog) => (
-            <div>{blog}</div>
+          {blogs.map((blog, index) => (
+            <div key={index}>{blog}</div>
           ))}
         </div>
       </div>

@@ -11,7 +11,7 @@ const page = () => {
       <div className="flex justify-items-center justify-between mx-24 mb-12">
         <p className="font-extrabold ">Blog</p>
         <div className="flex gap-6">
-          <button className=" rounded-3xl w-64  items-start border font-semibold px-6 ">
+          <button className=" rounded-3xl w-64   border font-semibold px-6 ">
             Search...
           </button>
           <button className=" rounded-md text-white  bg-[#264fad] font-semibold px-2 ">

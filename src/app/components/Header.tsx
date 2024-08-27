@@ -22,8 +22,8 @@ const Header = () => {
         />
       </div>
       <div className="flex gap-8">
-        {tabs.map((tab) => (
-          <div>{tab}</div>
+        {tabs.map((tab, index) => (
+          <div key={index}>{tab}</div>
         ))}
       </div>
       <div className="flex gap-8 justify-items-center items-center">

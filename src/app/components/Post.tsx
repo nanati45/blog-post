@@ -46,7 +46,10 @@ const Post = ({ da }: { da: data }) => {
       </div>
       <div className="flex gap-3">
         {da.skills.map((skill, index) => (
-          <button className=" rounded-3xl text-gray-400 bg-[#f5f5f5] font-normal p-2 ">
+          <button
+            key={index}
+            className=" rounded-3xl text-gray-400 bg-[#f5f5f5] font-normal p-2 "
+          >
             {skill}
           </button>
         ))}
