@@ -15,6 +15,8 @@ any id number would work since it has only a dummy data
 ## Screen Shots
 
 ![blogs](screenshots/blogs.png)
+![blogs](screenshots/blogs2.png)
 ![blogs](screenshots/blogpage.png)
 ![blogs](screenshots/blogdetails.png)
+![blogs](screenshots/details2.png)
 ![blogs](screenshots/relatedblogs.png)
