@@ -11,3 +11,10 @@ https://66ce3be3be297487fff9567b--jocular-khapse-36b013.netlify.app/pages/blogs/
 ```
 
 any id number would work since it has only a dummy data
+
+## Screen Shots
+
+![blogs](screenshots/blogs.png)
+![blogs](screenshots/blogpage.png)
+![blogs](screenshots/blogdetails.png)
+![blogs](screenshots/relatedblogs.png)
